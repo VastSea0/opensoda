@@ -202,88 +202,86 @@ const SocialPage = () => {
     
 
     return(
-        <div>
-        <Header></Header>
-        <div className="container" >
-            <h3>OpenSoda: Sosyal Toplugu</h3>
-            <div className="post-form glass center">
-                <div className="post-user" >
-                        <h5>
-                            {user ? 
-                            (userName)
-                            :
-                            (
-                                <>Anonim</>
-                            )}
-                        </h5>
-                        <h5 className="score-text">
-                            Score: {clientScore} 
-                        </h5>
-                </div>
-                <textarea className="textarea" ref={textareaRef} />
+<div>
+  <Header />
+  <div className="container">
+    <h3>OpenSoda: Sosyal Topluluk</h3>
+    <div className="post-form glass center">
+      <div className="post-user">
+        <h5>
+          {user ? userName : <>Anonim</>}
+        </h5>
+        <h5 className="score-text">
+          Score: {clientScore}
+        </h5>
+      </div>
+      <textarea className="textarea" ref={textareaRef} />
 
-                 
-                <button className="btn-p" onClick={addPost}>Gönderini Paylas</button>
-
-            </div>
-            <br></br>
-            <div className="posts">
-            {sortedUsersData.map((postUser) => (
-    <>
-        <div className="post glass">
+      <button className="btn-p" onClick={addPost}>
+        Gönderiyi Paylaş
+      </button>
+    </div>
+    <br />
+    <div className="posts">
+      {sortedUsersData.map((postUser) => (
+        <>
+          <div className="post glass">
             <Row>
-                <div className="post-user">
-                    <h5>{postUser.username}:</h5>
-                    <h5>{postUser.createdAt}</h5>
-                    <h5 className="score-text">{postUser.score}</h5>
-                    <h5 className="likes-text">{postUser.likes}</h5>
-                </div>
+              <div className="post-user">
+                <h5>{postUser.username}:</h5>
+                <h5>{postUser.createdAt}</h5>
+                <h5 className="score-text">{postUser.score}</h5>
+                <h5 className="likes-text">{postUser.likes}</h5>
+              </div>
             </Row>
             <div className="post-text">
-                <p>{postUser.text}</p>
+              <p>{postUser.text}</p>
             </div>
             <div className="post-likes">
-                
-                <button className="btn-like" onClick={() => handleLikeClick(postUser.postId)}>Begen</button>
-                <button className="btn btn-disabled" disabled onClick={() => handleShowCommentModal()}>Yorum Yap</button>
-                <Modal show={showCommentModal} onHide={handleCloseCommantModal} className='modal'>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Yorumlar</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>
-                        <input
-                            value={commentText}
-                            onChange={(e) => setCommentText(e.target.value)}
-                            placeholder="Yorumunuzu buraya girin"
-                            rows={4}
-                            cols={50}
-                        />
-                        <div className="comments-list">
-                            <h5>Yorumlar uzerinde calisiyorum yakinda yorumları goreceksiniz</h5>
-                            {comments.map((comment ) => (
-            <p  ><strong>{comment.displayName}: </strong>{comment.comment}</p>
-        ))}
-                        </div>
-                    </Modal.Body>
-                    <Modal.Footer>
-                        <Button variant="secondary" onClick={() => handleComment(postUser.postId, commentText)}>
-                            Yorumu ekle
-                        </Button>
-                    </Modal.Footer>
-                </Modal>  
+              <button className="btn-like" onClick={() => handleLikeClick(postUser.postId)}>
+                Beğen
+              </button>
+              <button className="btn btn-disabled" disabled onClick={() => handleShowCommentModal()}>
+                Yorum Yap
+              </button>
+              <Modal show={showCommentModal} onHide={handleCloseCommantModal} className="modal">
+                <Modal.Header closeButton>
+                  <Modal.Title>Yorumlar</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                  <input
+                    value={commentText}
+                    onChange={(e) => setCommentText(e.target.value)}
+                    placeholder="Yorumunuzu buraya girin"
+                    rows={4}
+                    cols={50}
+                  />
+                  <div className="comments-list">
+                    <h5>Yorumlar üzerinde çalışıyorum yakında yorumları göreceksiniz</h5>
+                    {comments.map((comment) => (
+                      <p>
+                        <strong>{comment.displayName}: </strong>
+                        {comment.comment}
+                      </p>
+                    ))}
+                  </div>
+                </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={() => handleComment(postUser.postId, commentText)}>
+                    Yorumu Ekle
+                  </Button>
+                </Modal.Footer>
+              </Modal>
             </div>
-        </div>
-        <br />
-    </>
-))}
+          </div>
+          <br />
+        </>
+      ))}
+    </div>
+  </div>
+  <div></div>
+</div>
 
-
-            </div>
-        </div>
-        <div>
-    
-        </div> 
-        </div>
     )
 }
 
