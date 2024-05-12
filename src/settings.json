@@ -1,0 +1,16 @@
+{
+    "ayarlar": {
+      "arkaPlanRengi": "#252426", 
+      "butonAnaRenk": "#5986c6", 
+      "butonIkincilRenk": "#7476cf", 
+      "butonUcunculRenk": "#d83557", 
+      "butonSeciliRenk": "#1373d8", 
+      "butonSecilimemisRenk": "#39373b", 
+      "yaziRengi": "#d8d6d8",  
+      "IkincilYaziRengi": "#d94039",   
+      "metinBoyutu": 16,  
+      "gölgeEfekti": true, 
+      "yuvarlatilmisKose": 10 
+    }
+  }
+  

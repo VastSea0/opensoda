@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+html, body{
+    margin: 0;
+    background-color: #252426;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+#root {
+  margin: 0;
+    background-color: #252426;
+    color: #d8d6d8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.share{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+}
+.bell-gear{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+
+}
+.bell-gear button{
+  margin-right: 10px;
+}
+
+.header{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.17);
+  height: 150px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+ 
+
+* {
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.progress-table{ 
+  padding: 10px;
+  background-color: #1c1c1d
+}
+
+.circular-progress {
+  position: relative;
+  width: 100px; 
+  height: 100px;
+  margin: 0 auto;
+}
+
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 10px solid #6a5858;
+  box-sizing: border-box;
+}
+
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5%; /* Initially 0% */
+  height: 100%;
+  border-radius: 50%;
+  background-color: #5183b8;   
+  transition: width 1s ease;  
+}
+
+.text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.btn-p {
+  justify-content: center; 
+  align-items: center;
+  border-radius: 15px;
+  min-height: 60px;
+  min-width: 250px;
+  border: 0px solid black;
+  background-color: #7476cf;
+  color: #d8d6d8;
+  transition: background-color 0.3s ease, color 0.3s ease;  
+}
+
+.btn-p:hover {
+  background-color: #5c5ead;
+  color: #fff;
+}
+
+.study{
+  display: flex;
+  padding: 20px;
+  padding-bottom: 30px;
+
+
+}
+.study .st{
+ padding-left: 30px; 
+ padding-bottom: 30px;
+ padding-top: 30px;
+}
+
+.modal{
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.17);
+  height: 70px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.true-text {
+  background: rgba(255, 255, 255, 0.17);
+  height: 200px;
+  width: 200px;
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;  
+  justify-content: center; 
+  align-items: center;
+  font-size: 128px;
+}
+.true-text-k {
+  background: rgba(255, 255, 255, 0.17);
+  height: 100px;
+  width: 400px;
+  border-radius: 30px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;  
+  justify-content: center; 
+  align-items: center;
+  font-size: 24px;
+}
+.d {
+ 
+  background: rgba(255, 255, 255, 0.17);
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;  
+  justify-content: center; 
+  align-items: center;
+  font-size: 92px;
+}
+.k {
+  background: rgba(255, 255, 255, 0.17);
+  height: 150px;
+  width: 150px;
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  display: flex;  
+  justify-content: center; 
+  align-items: center;
+  font-size: 28px;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.17);
+ 
+  border-radius: 15px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(6.8px);
+  -webkit-backdrop-filter: blur(6.8px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+   
+  justify-content: center; 
+  align-items: center;
+  font-size: 28px;
+}
+
+a, t{
+  color: white;
+  font-family: "Lilita One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+}
+
+.row {
+  display: flex;  
+  justify-content: space-between; 
+}
+
+ 
+.score-text{
+  font-size: 48;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  /* Adjustments for smaller screens (optional) */
+  .diger-text {
+    flex-direction: row; /* Change to horizontal row on smaller screens */
+    justify-content: space-around; /* Distribute elements evenly with some space */
+  }
+
+  .row {
+    flex-wrap: wrap; /* Wrap rows if content overflows on smaller screens */
+  }
+}
+
+.component {
+  margin: 1em auto;
+}
+
+.musicCover {
+  border-radius: 10%;
+}
+
+.playButton {
+  background: none;
+  border: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.subTitle {
+  margin-top: -1em;
+  color: #4f4f4f;
+}
+
+.time {
+  margin: 0 auto;
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  color: #ea0f0f;
+  font-size: smaller;
+}
+
+.timeline {
+  width: 80%;
+  background-color: #27ae60;
+}
+
+input[type="range"] {
+  background-color: #27ae60;
+}
+
+@media (max-width: 900px) {
+  .component {
+    width: 50%;
+  }
+}
+
+ 
+
+.table th, 
+.table td { 
+  padding: 10px; /* Hücrelere dolgu ekle */
+  border: 1px solid #ddd; /* Hücrelere kenarlık ekle */
+  text-align: left; /* Metni sxcola cdfhizala  */
+}
+
+.thead,  .th {
+  background-color: #f2f2f2; /* Başlık satırı için arkaplan rengi ayarla */
+  font-weight: bold; /* Başlık metnini kalın yap */
+  padding: 10px;
+  margin: 5px;
+}
+
+.table-div{
+  background-color: #1c1c1d;
+  padding: 10px;
+  margin: 5px;
+  margin: auto; /* Tabloyu yatay olarak ortala */
+  border-collapse: collapse; /* Varsayılan hücre boşluklarını kaldır */
+
+
+}
+.footer {
+  position: fixed;  
+  bottom: 0; 
+  width: 100%;  
+}
+
+.textarea {
+  width: 100%;
+  max-height: 150px;
+  border-radius: 30px;
+}
+
+.posts {
+  margin: 5px 5px 5px, 5px;
+  padding: 50px ,5px ,5px, 5px;
+ 
+}
+.post-text {
+  background-color: #5183b8;
+  padding-left: 50px;
+}
+
+.post-user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;  
+  padding: 10px;  
+}
+.post-user h5{
+  flex: 1;  
+  padding: 10px; 
+  text-align: center;  
+}
+
+.post-likes {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 500px;  
+  padding: 10px;  
+}
+.post-likes button{
+  flex: 1;  
+  padding: 10px;  
+  margin: 5px;
+  text-align: center;  
+}
+
+.btn-like {
+  justify-content: center; 
+  align-items: center;
+  border-radius: 15px;
+  min-height: 30px;
+  min-width: 150px;
+  border: 0px solid black;
+  background-color: #6566a7;
+  color: #d8d6d8;
+  transition: background-color 0.3s ease, color 0.3s ease;  
+}
+
+ 

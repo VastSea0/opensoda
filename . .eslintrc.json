@@ -1,0 +1,7 @@
+{
+    "parser": "@babel/eslint-parser",
+    "plugins": [
+      "@babel/eslint-parser"
+    ]
+  }
+  
